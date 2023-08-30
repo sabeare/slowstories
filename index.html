@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>slow datavisualisatie</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <link rel="icon" type="image/x-icon"
+    href="https://raw.githubusercontent.com/mapbox/assembly/publisher-staging/src/svgs/mapbox.svg" />
+  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/intersection-observer@0.12.0/intersection-observer.js"></script>
+  <script src="https://unpkg.com/scrollama"></script>
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+  <!-- <div id="mapInset"></div> -->
+  <div id="tabblad-footer">
+    <div id="back" class="tab-row">      
+      <div id="samenvatting" class="tabblad" onclick="onTabClick(this)">
+        <div class="head">
+          <h3>Samenvatting</h3>
+          <div class="toggle-image arrow" onclick="onCrossClick('samenvatting', event)"></div>
+        </div>
+        <div class="content">
+          <p>
+            Dit onderzoek gaat over het zichtbaar maken van de beleving en betekenis van de leefomgeving. Hiervoor zocht ik doelgroepen die je normaal niet hoort en data die je normaal niet zomaar vindt. Het doel van mijn ontwerpende onderzoek was om een manier te vinden om die stemmen en data te visualiseren en te verdiepen. Ik heb hiertoe een methode ontwikkeld. <br><br>Mijn onderzoeksvraag was: <em>Hoe kan een slow datavisualisatiemethode worden vormgegeven die bijdraagt aan het zichtbaar maken van de beleving en betekenis van een wijk voor en door wijkmakers.</em> Wijkmakers zijn diegenen die zich inzetten voor het gelijkwaardiger maken en verbeteren van de leefomgeving op een creatieve, verbindende en tastbare manier. <br><br>Ik heb participatief wijkonderzoek uitgevoerd, door samen met wijkmakers uit de Amersfoortse wijk het Soesterkwartier te wandelen en te borduren om zo hun verhalen te visualiseren, te delen en te verdiepen. <br><br>Dit resulteerde in een slow datavisualisatiemethode gericht op verbinden, reflecteren en complexiteit omarmen. De methode bevat elementen van slow research en design, creative placemaking en datafeminisme. <br><br>De methode bestaat uit drie fases, verkennen, verbeelden en verdiepen. In iedere fase staat vertragen centraal, door wandelen en borduren als analoge werkvormen te gebruiken. Door met aandacht en langdurig aanwezig te zijn in de wijk en te vertragen kan latente informatie zichtbaar worden gemaakt. <br><br>Een belangrijk onderdeel van de methode is het verdiepen van opgehaalde resultaten met behulp van een conversation piece. Tijdens dit onderzoek borduurde ik, soms samen met wijkmakers, alle opgehaalde informatie op een tafelkleed. <br><br>Ik heb vervolgens het community borduurproject Sterke Vrouwen opgezet om samen te borduren, de informatie op de conversation piece te verdiepen, en weer nieuwe informatie op te halen. Zo fungeert de conversation piece als een multilayered storytelling tool, om meerstemmigheid en verdieping  van de kennis en daarmee meer verbinding tussen mensen onderling en met de wijk tot stand te brengen. <br><br> Borduren werkt goed omdat het helpt te vertragen en daarmee beter te reflecteren. Het biedt ruimte om samen aan te werken. Het verbindt wijkmakers. Het leent zich bovendien om subjectieve data en de gelaagdheid ervan te visualiseren en zo tastbaar de opgehaalde informatie te verdiepen. Vertragen is vermenigvuldigen. 
+          </p>
+        </div>
+      </div>
+      <div id="hoofdstuk" class="tabblad" onclick="onTabClick(this)">
+        <div class="head">
+          <h3>Inhoud</h3>
+          <div class="toggle-image arrow" onclick="onCrossClick('hoofdstuk', event)"></div>
+        </div>
+        <div class="content">
+          <!--<p>
+            Dit is een automatisch overzicht van de hoofdstukken uit de config
+          </p>-->
+          <a href="">Terug naar home</a><br />
+        </div>
+      </div>
+    </div>
+
+    <div id="front" class="tab-row">
+
+      <div id="colofon" class="tabblad" onclick="onTabClick(this)">
+        <div class="head">
+          <h3>Colofon</h3>
+
+          <div class="toggle-image arrow" onclick="onCrossClick('colofon', event)"></div>
+        </div>
+        <div class="content">
+          <p>
+            <ul><li>TEKST: Baukje Rienks</li> 
+                <li>TEKSTREDACTIE: Olga Helmer</li>
+                <li>EINDREDACTIE: Maaike Fekkes</li>
+                <li>BEELD & BORDUURSELS: Baukje Rienks <br>(tenzij anders aangegeven)</li> 
+                <li>STORYMAP in HTML & JS: Baukje Rienks & Niene Boeijen </li>
+                <li>WEB DESIGN & MAPSTYLING: Baukje Rienks</li><br>
+                &copy Baukje Rienks, 2023
+
+            </ul>
+            <br>
+            Dankjewel<br>
+            WANDELAARS: Hedy, Chantal, Marieke, Ingrid, Natasja, Iris, Henry,  Bram, Oeds, Sander, Bets, Bernard, Linda, Marlijn, Jenneke, Monique L. en Manon <br>
+            BORDUURSTERS: Miranda, Monique J., Bärbel, Janke, Linda, Iris, Wilmie, Simone, Marjolein, Marleen, Monique H. Marta, Janneke, Nienke, Lotje, Lotte, Rose, Lydeke, Hedy, Kino, Edith, Rachel, Floor, Clary, Christa, Annemarie, Bea, Wil, Kriek, Conny, Jamila, Gonny, Adrie en Doortje  <br>
+            WEGWIJZERS: Jan Pieter, Aster, Marre, Roy, Coby, Maaike F, Olga, Niene, Anna, Kat, Sara, Maaike de L., Anne-Karin, Naomi en Willemijn                    
+        </p>
+        </div>
+      </div>
+      <div id="bilbio" class="tabblad" onclick="onTabClick(this)">
+        <div class="head">
+          <h3>Bibliografie</h3>
+          <div class="toggle-image arrow" onclick="onCrossClick('bilbio', event)"></div>
+        </div>
+        <div class="content">
+          <p>
+            <ul>
+                <li>Alle cijfers (<a href="https://allecijfers.nl/basisscholen-overzicht/amersfoort/">website</a>), 2/11/22.* <br>* Ik maakte op basis van deze data een dataset van alle scholen in Amersfoort en Hoogland, met het aantal leerlingen uit het postcode gebeid 3812, Het soesterkwartier. </li><br>
+                <li>Lynda Barry,<em> Syllabus: Notes from an Accidental Professor</em> (Drawn And Quarterly, 2014), p.35</li><br>
+                <li>Riffy Bol, <a href="https://decorrespondent.nl/8563/groningen-besloot-zelf-in-haar-straatnamen-te-duiken-conclusie-nog-minder-vrouwen-dan-in-de-randstad/730746279824-2af23f33"><em>Groningen besloot zelf in haar straatnamen te duiken. Conclusie: nog minder vrouwen dan in de Randstad</em></a> (De correspondent, augustus 9, 2018), 15/02/23</li><br>
+                <li>Maggie Berg & Barbara K. Seeber, <em>The Slow Professor. Challenging the Culture of Speed in the Academy</em> (University of Toronto Press, 2017), p.57</li><br>
+                <li>Jordan Cunliffe, <a href="https://www.instagram.com/p/Ck6qq_jIe1V/?igshid=MDJmNzVkMjY%3D"><em> Process</em></a>, (Instagram, november 13, 2022), 18/11/22</li><br>
+                <li>Jordan Cunliffe, <em>Record, Map and Capture in Textile Art: Data visualization in cloth and stitch</em> (Batsford, 2022), p.6-9</li><br>
+                <li>Catherine D’Ignazio & Lauren F. Klein, <em>Data Feminism </em>(M.I.T. Press, 2020), p.8-10</li><br>
+                <li>Lauren Elkin, <em>Flâneuse: Women walk the City, in Paris, New York, Tokyo, Venice and London</em> (Vintage, 2016), p.3, 7, 13, 22</li><br>
+                <li>Federica Fragapane, <em>Data Visualization and Information Design: Create a Visual Model</em> (Domestika course, 2021), 16-01-2022</li><br>
+                <li>Leon de Korte & Sara Sprinkhuizen <a href="https://decorrespondent.nl/7838/van-pythagoras-tot-amalia-hoe-wij-5-400-amsterdamse-straatnamen-analyseerden/63df2744-22cf-0eef-174b-8b5ea7561671"><em>Van Pythagoras tot Amalia: hoe wij 5.400 Amsterdamse straatnamen analyseerden</em></a> (De Correspondent, maart 28, 2018), 15/02/23 </li><br>
+                <li>Alexandra Lange, <a href="https://www.newyorker.com/culture/culture-desk/can-data-be-human-the-work-of-giorgia-lupi"><em>Can Data be Human? The Work of Giorgia Lupi</em></a> (The New Yorker, mei 25, 2019), 8/11/22</li><br>
+                <li>Giorgia Lupi, <a href="https://www.printmag.com/article/data-humanism-future-of-data-visualization/"> <em>Data Humanism: the Revolutionary Future of Data Visualization</em></a> (PrintMag, januari 30, 2017), 8/11/22</li><br>
+                <li>Kevin Lynch, <em>The Image of the City</em> (M.I.T. Press, 1960), p.1, 41-42</li><br>
+                <li>Ray Oldenburg, <em>Our vanishing third places</em> (Planning commissioners journal 25.4, 1997), p.6-10</li><br>
+                <li>Shane O’Mara, <em>In Praise of Walking: The New Science of How We Walk and Why It’s Good for Us </em> (Penguin Random House, 2020), P.99, 104</li><br>
+                <li>Caroline Criado Perez, <em>Invisible Women: Exposing Data Bias in a World Designed for Men</em> (Vintage, 2020), p.XII, 35-38</li><br>
+                <li>Project for Public Spaces, <a href="https://www.pps.org/article/5-steps-to-making-place"> <em>5-steps to making places </em></a> (website, december 21, 2017), 18/4/23</li><br>
+                <li>Carolyn Strauss & Fuad-Luke Alastair, <a href=" https://www.slowlab.net/Resources-PUBLICATIONS-Slow-reading-s"><em>The Slow Design Principles. A new interrogative and reflexive tool for deign research and practice </em> </a> (conference paper) (Changing The Change: Design Visions, Proposals and Tools, 2008), 4/4/2023</li><br>
+                <li>Sara Vrugt, (<a href="https://nieuw.vrugt.com/over-sara/">website</a>), 18/11/22</li><br>
+                <li>Sara Wookey & Nina Ernst, <a href="https://www.youtube.com/watch?v=8Ho1RWlpR78"> <em>Artist Talk: Sara Wookey</em></a> (YouTube, september 15, 2020) geüpload door ArtScience Museum, 18/2/22</li><br>
+            </ul>
+        </p>
+        </div>
+      </div>
+      <div id="lexicon" class="tabblad" onclick="onTabClick(this)">
+        <div class="head">
+          <h3>Lexicon</h3>
+          <div class="toggle-image arrow" onclick="onCrossClick('lexicon', event)"></div>
+        </div>
+        <div class="content">
+            <p>
+                <ul>
+                  <li>ANALOOG:  <br>is een werkwijze binnen de slow datavisualisatie. Het maak- en denkproces van de designer verloopt bewust zonder digitale technologie, meestal in de vorm van mapping en hand getekende datavisualisaties, of in mijn geval borduren. Let op: dit betekent niet dat het eindresultaat per sé analoog moet zijn. In mijn werkwijze vertraag ik expliciet zowel bij het verzamelen van de data als bij de verwerking ervan.    </li><br><br> 
+                  <li>LEEFOMGEVING: <br>is de nabije publieke ruimte van je huis of werk. Stadssocioloog Ray Oldenburg noemde dit gebied <em>third place</em>. Het gebied dat op wandelafstand ligt van huis (first place) en/of werk (second place). De leefomgeving is een belangrijke plek waar je spontaan anderen tegen kunt komen en waar je sociale activiteiten en interactie aan kunt gaan. Zoals op hondenveldjes, parken, lokale cafés, de bibliotheek en sportclubs. Deze zijn essentieel, omdat welzijn en fysieke gezondheid afhankelijk zijn van dit soort communities. Door sociale media, technologie en polarisatie nemen deze spontane ontmoetingen in de leefomgeving steeds verder af(Oldenburg, 1997).</li><br><br>
+                  <li>MENTAL MAP: <br>is een handgetekende kaart van een gebied op basis van herinneringen. Daarbij wordt gebruik gemaakt van oriëntatiepunten in het gebied, details uit het verleden en het bewust inzetten van zintuigen. Volgens urban planner Kevin Lynch, auteur van het boek <em>The image of the city</em>, heeft iedere burger een beeld van diens omgeving dat gedrenkt is in herinneringen en persoonlijke betekenissen (Lynch, 1960). </li><br><br>
+                  <li>MULTILAYERED STORYTELLING TOOL: <br>is het inzetten van de slow datavisualisatiemethode om ruimte te bieden voor verdere aanvullingen en nieuwe lagen van informatie. Hierdoor herhaalt het proces van verbinden, reflecteren en het verdiepen van de complexiteit zich waardoor de conversation piece een steeds rijkere gelaagdheid en meerstemmigheid toont. </li><br><br>
+                  <li>SLOW DATAVISUALISATIE: <br>is een methode om slow research in een gebied toe te passen volgens de fases: verkennen, verbeelden en verdiepen. Het beoogt niet alleen de visuele representatie van informatie gericht op de gebruiker, maar ook om de waarde te tonen van de context met behulp van subjectieve data in de vorm van mental maps of anekdotes, uitgevoerd op een conversation piece. Slow datavisualisaties laten ruimte om je eigen verhaal te destilleren en aan te vullen. Het proces van slow datavisualisaties wordt grotendeels analoog uitgevoerd, in mijn geval door te borduren.    </li><br><br>
+                  <li>SLOW RESEARCH: <br>gaat om betekenis geven aan het denken door verbondenheid, reflectie en het omarmen van complexiteit volgens Magie Berg en Barbara Seeber in hun boek The Slow Professor uit 2017. Slow research maakt tijdens het designproces gebruik van embodied en/of analoge methodes om tot nieuwe inzichten te komen. Het is een vorm van vertragen met de focus op verbinding, reflectie en complexiteit.</li><br><br>
+                  <li>WIJKMAKERS:  <br>Zijn iedereen die zich inzet voor het gelijkwaardiger maken en verbeteren van de leefomgeving binnen een wijk, op een creatieve, verbindende en tastbare manier. De mensen die ik tijdens mijn onderzoek tegenkwam waren allerlei <em>wijkmakers</em>. Ze noemden zichzelf: stadmaker, kwartiermaker, wijkwerker, sociaal architect, stedenbouwkundige, urban designer, design antropoloog, omgevingspsycholoog, feministisch geograaf, beleidsmaker, landschapsarchitect, information designer of betrokken bewoner. </li><br><br>  
+                </ul>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="openingsFoto">
+    <img src="images/begin.svg" alt="auto in voortuin" >
+    <div id="centered">   
+    </div>
+  </div>
+  <div id="map"></div>
+  <div id="story"></div>
+  <script src="./config.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

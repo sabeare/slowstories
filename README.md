@@ -1,2 +1,2 @@
-# slowstories
-english version 
+# mapstory
+ https://sabeare.github.io/mapstory/
